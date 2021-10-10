@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import Accordion from "./components/Accordion/Accordion";
-import { AccordionType } from "./components/Accordion/schema/AccordionSchemaType";
+import {
+  AccordionContent,
+  AccordionType,
+} from "./components/Accordion/schema/AccordionSchemaType";
 import validateSchema from "./components/Accordion/schema/utils/validateSchema";
+import Sidebar from "./components/SidebarxModal/Sidebar";
+import SidebarxModalProvider from "./components/SidebarxModal/SidebarxModalProvider";
 
 function App() {
   const [data, setData] = useState<AccordionType[]>();
+  const [current, setCurrent] = useState<AccordionContent>();
   const [error, setError] = useState<String>();
 
   const NestedAccordion = function (index: number) {
@@ -27,6 +33,7 @@ function App() {
               key={index}
               title={subAccordion.title}
               color={subAccordion.color}
+              background={subAccordion.background}
               isOpen={subAccordion.open}
               fullWidth={subAccordion.fullWidth}
               style={{
@@ -44,14 +51,31 @@ function App() {
                   {subAccordion.sections.map((section, index) => {
                     const style = {
                       background:
-                        (section.color || subAccordion.sectionColor) + "80",
+                        section.background ||
+                        section.color ||
+                        subAccordion.sectionColor,
                       border: `3px solid ${
                         (section.color || subAccordion.sectionColor) + "80"
                       }`,
                     };
-
+                    if (style.background !== section.background) {
+                      style.background += "80";
+                    }
                     return (
-                      <li className="item" key={index} style={style}>
+                      <li
+                        className="item"
+                        key={index}
+                        style={style}
+                        onClick={({ currentTarget }) => {
+                          document
+                            .querySelectorAll(".item.selected")
+                            .forEach((element) => {
+                              element.classList.remove("selected");
+                            });
+                          currentTarget.classList.add("selected");
+                          setCurrent(section.content);
+                        }}
+                      >
                         <h1>{section.title}</h1>
                         <h2>{section.subtitle}</h2>
                       </li>
@@ -79,10 +103,87 @@ function App() {
   }, []);
 
   return (
-    <>
-      {error && <b>{error}</b>}
-      {data && !error && NestedAccordion(0)}
-    </>
+    <SidebarxModalProvider.Provider value={{ current, setCurrent }}>
+      <div className="wrapper">
+        {error && <b>{error}</b>}
+        {data && !error && NestedAccordion(0)}
+        <Sidebar />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </SidebarxModalProvider.Provider>
   );
 }
 

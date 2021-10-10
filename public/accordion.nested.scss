@@ -1,10 +1,149 @@
+$first-break-point: 1250px;
+$second-break-point: 875px;
+
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 #nested-accordion {
   * {
     box-sizing: border-box;
+  }
+  #sidebar {
+    font-family: "DW Sans", sans-serif;
+    position: sticky;
+    top: 30px;
+    right: 0;
+    width: 305px;
+    min-width: 305px;
+    animation: slideLeft 0.26s ease-out 1;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+    @media screen and (max-width: $first-break-point) {
+      display: none;
+    }
+    &:not(.has-case-study) {
+      padding-bottom: 24px;
+    }
+    h1,
+    p {
+      margin: 0 24px;
+      margin-bottom: 24px;
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 143%;
+      color: #2b2b2b;
+    }
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 143%;
+      color: #7907fe;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 24px !important;
+      padding-top: 24px !important;
+    }
+    .urls a,
+    .read-case-study {
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url("/svg/icon-arrow.svg") no-repeat center;
+        background-size: 10px;
+        position: absolute;
+        top: 37%;
+      }
+    }
+    .urls {
+      margin: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      a {
+        position: relative;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+        color: #333333;
+        text-decoration: none;
+        background: #f9f9f9;
+        border-radius: 20px;
+        padding: 8px 16px;
+        &::before {
+          right: 24px;
+        }
+        &:hover {
+          color: #ffffff;
+          background: #a466ff;
+          &::before {
+            background: url("/svg/icon-arrow-hover.svg") no-repeat center;
+          }
+        }
+      }
+    }
+    .read-case-study {
+      margin-top: 24px;
+      display: block;
+      width: 100%;
+      height: 67px;
+      background: #f9f9f9 url("/svg/dots.svg") no-repeat bottom center;
+      background-size: cover;
+      padding: 15px 22px 30px 22px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      color: #7907fe;
+      text-decoration: none;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 37px;
+        bottom: 10px;
+        width: 70px;
+        height: 70px;
+        pointer-events: none;
+        background: url("/img/cube.png") no-repeat center;
+        background-size: cover;
+      }
+      &::before {
+        top: 32%;
+        right: 120px;
+      }
+      &:hover {
+        color: #ffffff;
+        background: #a466ff url("/svg/dots-hover.svg") no-repeat bottom center;
+        &::before {
+          background: url("/svg/icon-arrow-hover.svg") no-repeat center;
+        }
+      }
+    }
+    @keyframes slideLeft {
+      from {
+        transform: translateX(200px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
   }
   .accordion {
     font-family: "DW Sans", sans-serif;
@@ -31,9 +170,17 @@ body {
         &,
         .item {
           flex: 1 !important;
+          @media screen and(max-width: $second-break-point) {
+            flex: 100% !important;
+          }
         }
-        .item {
-          display: none;
+      }
+      .item {
+        display: none;
+      }
+      .item {
+        @media screen and(max-width: $second-break-point) {
+          flex: 100% !important;
         }
       }
       .content {
@@ -85,6 +232,18 @@ body {
       letter-spacing: 0em;
       text-align: left;
     }
+    &:not(.parent) {
+      @media screen and (max-width: $first-break-point) {
+        &:not(.full-width) {
+          flex: 1 !important;
+        }
+      }
+      @media screen and (max-width: $second-break-point) {
+        &.is-closed {
+          flex: 100% !important;
+        }
+      }
+    }
   }
 
   .category-items {
@@ -93,7 +252,11 @@ body {
     padding-inline-start: 0;
     flex-flow: row wrap;
     width: 100%;
+    @media screen and (max-width: $first-break-point) {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
     .item {
+      cursor: pointer;
       flex: 1 30%;
       height: 80px;
       max-height: 80px;

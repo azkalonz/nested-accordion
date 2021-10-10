@@ -13,7 +13,7 @@
             "title": "AEMO",
             "subtitle": "Project EDGE",
             "content": {
-              "title": "Origin Central America Second Row",
+              "title": "Origin asdCentral America Second Row",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
               "urls": {
                 "main": "http://energyweb.org/",
@@ -240,25 +240,25 @@
         "fullWidth": true,
         "sections": [
           {
-            "subtitle": "Switchboard"
+            "subtitle": "DSB Messanging"
           },
           {
-            "subtitle": "DIDs"
+            "subtitle": "Cache Server for blockchain data"
           },
           {
-            "subtitle": "IAM Client Lib"
+            "subtitle": "Staking"
           },
           {
-            "subtitle": "Switchboard"
+            "subtitle": "Watchtower"
           },
           {
-            "subtitle": "DIDs"
+            "subtitle": "EWNS Name Service"
           },
           {
-            "subtitle": "IAM Client Lib"
+            "subtitle": "EKC- Enterprise Key Connect"
           },
           {
-            "subtitle": "IAM Client Lib"
+            "subtitle": "ETH<>EWCBridge"
           }
         ]
       }
@@ -266,6 +266,31 @@
   },
   {
     "title": "Trust Layer",
-    "open": true
+    "open": true,
+    "content": [
+      {
+        "title": "Energy Web Chain & Tools",
+        "color": "#ffffff",
+        "sectionColor": "#ffffff",
+        "background": "#d2b3ff",
+        "columns": 4,
+        "sections": [
+          {
+            "subtitle": "Energy Web Chain",
+            "background": "#ad76ff",
+            "color": "#000000"
+          },
+          {
+            "subtitle": "EWT"
+          },
+          {
+            "subtitle": "Validator Nodes"
+          },
+          {
+            "subtitle": "Block Explorer"
+          }
+        ]
+      }
+    ]
   }
 ]

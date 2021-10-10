@@ -12,6 +12,7 @@ interface AccordionProps {
   style?: React.CSSProperties;
   isOpen?: boolean;
   fullWidth?: boolean;
+  background?: string;
 }
 
 export default function Accordion(props: AccordionProps) {
@@ -21,6 +22,7 @@ export default function Accordion(props: AccordionProps) {
     isOpen = false,
     fullWidth = false,
     style = {},
+    background,
     color,
     title,
     children,
@@ -46,7 +48,7 @@ export default function Accordion(props: AccordionProps) {
         .join(" ")
         .trim()}
       style={{
-        background: color + "1a",
+        background: background ? background : color + "1a",
         color,
         ...style,
         ...(fullWidth

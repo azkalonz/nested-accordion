@@ -4,16 +4,18 @@ type ContentURLs = {
   readCaseStudy?: string;
 };
 
-interface AccordionContent {
+export interface AccordionContent {
   title: string;
   body: string;
   urls: ContentURLs;
+  variant: "simple" | "advanced";
 }
 
 interface AccordionSection {
   title: string;
   subtitle?: string;
   color: string;
+  background?: string;
   sectionColor?: string;
   content: AccordionContent;
   sections?: AccordionSection[];
