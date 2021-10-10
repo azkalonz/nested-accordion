@@ -1,0 +1,221 @@
+[
+  {
+    "title": "Applications",
+    "open": true,
+    "content": [
+      {
+        "title": "DER Management",
+        "color": "#229AAA",
+        "sectionColor": "#7BD8E5",
+        "columns": 2,
+        "sections": [
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "title": "AEMO",
+            "subtitle": "Project EDGE",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "E-Mobility",
+        "color": "#0BA740",
+        "sectionColor": "#58F48D",
+        "sections": [
+          {
+            "title": "Elia",
+            "subtitle": "E-Mobility Dashboard",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "Traceability",
+        "color": "#E4A001",
+        "sectionColor": "#FEC43D",
+        "sections": [
+          {
+            "subtitle": "Zero",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "subtitle": "Origin",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "subtitle": "24/7",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "DeFi",
+        "color": "#DE0862",
+        "sectionColor": "#F9559A",
+        "sections": [
+          {
+            "subtitle": "Zero",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "subtitle": "Origin",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          },
+          {
+            "subtitle": "24/7",
+            "content": {
+              "title": "Origin Central America Second Row",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra risus ornare ullamcorper aliquet et ac velit. Arcu, mattis eu nisl mauris, quisque interdum. Vulputate orci suspendisse vulputate sodales eu consequat. ",
+              "urls": {
+                "main": "http://energyweb.org/",
+                "readMore": "http://energyweb.org/",
+                "readCaseStudy": "http://energyweb.org/"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Infrastructure",
+    "open": true
+  },
+  {
+    "title": "Trust Layer",
+    "open": true
+  }
+]

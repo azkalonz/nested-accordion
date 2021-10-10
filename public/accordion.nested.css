@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+}
+
+#nested-accordion .accordion {
+  font-family: "DW Sans", sans-serif;
+  margin: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 50px;
+  -webkit-transition: -webkit-box-flex 0.26s ease-out;
+  transition: -webkit-box-flex 0.26s ease-out;
+  transition: flex 0.26s ease-out;
+  transition: flex 0.26s ease-out, -webkit-box-flex 0.26s ease-out, -ms-flex 0.26s ease-out;
+}
+
+#nested-accordion .accordion.parent {
+  min-height: 65px;
+  border: 1px solid #bdbdbd;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#nested-accordion .accordion.parent .content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#nested-accordion .accordion.parent .title {
+  width: 100%;
+}
+
+#nested-accordion .accordion.is-closed:not(.parent) {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 !important;
+          flex: 1 !important;
+}
+
+#nested-accordion .accordion.is-closed .content {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  margin-top: -200%;
+  padding: 0 16px;
+  opacity: 0;
+}
+
+#nested-accordion .accordion.is-closed.parent .title {
+  border-radius: 10px;
+}
+
+#nested-accordion .accordion .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 16px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  margin-top: 0;
+  -webkit-transition: all 0.46s ease-in-out, opacity 0.1s ease-in-out;
+  transition: all 0.46s ease-in-out, opacity 0.1s ease-in-out;
+  opacity: 1;
+}
+
+#nested-accordion .accordion:not(.themed) .title {
+  border-bottom: 1px solid #bdbdbd;
+  border-radius: 10px 10px 0 0;
+  background: #ffffff;
+}
+
+#nested-accordion .accordion.themed .title {
+  -webkit-backdrop-filter: opacity(10px);
+          backdrop-filter: opacity(10px);
+  background: transparent;
+  border-bottom: none;
+}
+
+#nested-accordion .accordion .title {
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px;
+  -webkit-transition: all 0.26s ease-in-out;
+  transition: all 0.26s ease-in-out;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#nested-accordion .category-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+#nested-accordion .category-items .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 30%;
+          flex: 1 30%;
+  margin: 8px;
+  height: 80px;
+  max-height: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+#nested-accordion .category-items .item h1,
+#nested-accordion .category-items .item h2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+#nested-accordion .category-items .item h2 {
+  font-weight: 700;
+}
+
+#nested-accordion .category-items .item:not(.selected) {
+  border: none !important;
+}
+
+#nested-accordion .category-items .item:not(.filler):hover {
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+#nested-accordion .category-items .item:not(.filler).selected {
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+  background: #fff !important;
+}
+/*# sourceMappingURL=accordion.nested.css.map */
