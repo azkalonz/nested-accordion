@@ -212,7 +212,57 @@
   },
   {
     "title": "Infrastructure",
-    "open": true
+    "open": true,
+    "content": [
+      {
+        "title": "Identity Solutions",
+        "color": "#006CF0",
+        "sectionColor": "#006CF0",
+        "fullWidth": true,
+        "columns": 3,
+        "sections": [
+          {
+            "subtitle": "Switchboard"
+          },
+          {
+            "subtitle": "DIDs"
+          },
+          {
+            "subtitle": "IAM Client Lib"
+          }
+        ]
+      },
+      {
+        "title": "Utility Layer",
+        "color": "#7907FE",
+        "sectionColor": "#A466FF",
+        "columns": 4,
+        "fullWidth": true,
+        "sections": [
+          {
+            "subtitle": "Switchboard"
+          },
+          {
+            "subtitle": "DIDs"
+          },
+          {
+            "subtitle": "IAM Client Lib"
+          },
+          {
+            "subtitle": "Switchboard"
+          },
+          {
+            "subtitle": "DIDs"
+          },
+          {
+            "subtitle": "IAM Client Lib"
+          },
+          {
+            "subtitle": "IAM Client Lib"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Trust Layer",

@@ -7,6 +7,7 @@
     "color": { "type": "string" },
     "background": { "type": "string" },
     "columns": { "type": "number" },
+    "fullWidth": { "type": "boolean" },
     "content": {
       "type": "object",
       "properties": {

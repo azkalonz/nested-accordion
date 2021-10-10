@@ -11,6 +11,7 @@ interface AccordionProps {
   parent?: boolean;
   style?: React.CSSProperties;
   isOpen?: boolean;
+  fullWidth?: boolean;
 }
 
 export default function Accordion(props: AccordionProps) {
@@ -18,6 +19,7 @@ export default function Accordion(props: AccordionProps) {
     arrow = true,
     parent = false,
     isOpen = false,
+    fullWidth = false,
     style = {},
     color,
     title,
@@ -39,10 +41,20 @@ export default function Accordion(props: AccordionProps) {
         parent ? "parent" : "",
         color ? "themed" : "",
         !isOpen ? "is-closed" : "is-open",
+        fullWidth ? "full-width" : "",
       ]
         .join(" ")
         .trim()}
-      style={{ background: color + "1a", color, ...style }}
+      style={{
+        background: color + "1a",
+        color,
+        ...style,
+        ...(fullWidth
+          ? {
+              flex: "100%",
+            }
+          : {}),
+      }}
     >
       <div className="title" onClick={toggleContent}>
         <b style={{ color }}>{title}</b>

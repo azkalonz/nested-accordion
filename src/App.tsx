@@ -28,33 +28,35 @@ function App() {
               title={subAccordion.title}
               color={subAccordion.color}
               isOpen={subAccordion.open}
+              fullWidth={subAccordion.fullWidth}
               style={{
                 flex: subAccordion.columns || 1,
               }}
             >
               {subAccordion.sections && (
-                <ul className="category-items">
-                  {subAccordion.sections.map((section, index) => (
-                    <li
-                      className="item"
-                      key={index}
-                      style={{
-                        background:
-                          (section.color || subAccordion.sectionColor) + "80",
-                        border: `3px solid ${
-                          (section.color || subAccordion.sectionColor) + "80"
-                        }`,
-                        flex: `1 ${60 / (subAccordion.columns || 1)}%`,
-                      }}
-                    >
-                      <h1>{section.title}</h1>
-                      <h2>{section.subtitle}</h2>
-                    </li>
-                  ))}
-                  {subAccordion.sections.length % 2 !== 0 &&
-                    subAccordion.sections.length !== 1 && (
-                      <li className="item filler"></li>
-                    )}
+                <ul
+                  className="category-items"
+                  style={{
+                    gridTemplateColumns: `repeat(${subAccordion.columns},1fr)`,
+                    gap: 16,
+                  }}
+                >
+                  {subAccordion.sections.map((section, index) => {
+                    const style = {
+                      background:
+                        (section.color || subAccordion.sectionColor) + "80",
+                      border: `3px solid ${
+                        (section.color || subAccordion.sectionColor) + "80"
+                      }`,
+                    };
+
+                    return (
+                      <li className="item" key={index} style={style}>
+                        <h1>{section.title}</h1>
+                        <h2>{section.subtitle}</h2>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </Accordion>

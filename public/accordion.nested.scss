@@ -3,6 +3,9 @@ body {
 }
 
 #nested-accordion {
+  * {
+    box-sizing: border-box;
+  }
   .accordion {
     font-family: "DW Sans", sans-serif;
     margin: 10px;
@@ -24,8 +27,14 @@ body {
       }
     }
     &.is-closed {
-      &:not(.parent) {
-        flex: 1 !important;
+      &:not(.parent):not(.full-width) {
+        &,
+        .item {
+          flex: 1 !important;
+        }
+        .item {
+          display: none;
+        }
       }
       .content {
         transform: translateY(-100%);
@@ -63,7 +72,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-sizing: border-box;
       padding: 16px;
       transition: all 0.26s ease-in-out;
       position: relative;
@@ -80,21 +88,20 @@ body {
   }
 
   .category-items {
-    display: flex;
+    display: grid;
     list-style: none;
     padding-inline-start: 0;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     width: 100%;
     .item {
       flex: 1 30%;
-      margin: 8px;
       height: 80px;
       max-height: 80px;
       justify-content: center;
       flex-direction: column;
       display: flex;
       border-radius: 8px;
-      padding: 24px;
+      padding: 0 24px;
       h1,
       h2 {
         font-size: 16px;

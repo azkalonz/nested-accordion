@@ -19,6 +19,7 @@ interface AccordionSection {
   sections?: AccordionSection[];
   columns?: number;
   open?: boolean;
+  fullWidth?: boolean;
 }
 
 export interface AccordionType {
