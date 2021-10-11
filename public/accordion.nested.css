@@ -8,6 +8,12 @@ body {
           box-sizing: border-box;
 }
 
+#nested-accordion .detail-card-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+}
+
 @media screen and (max-width: 1433px) {
   #nested-accordion .detail-card-container {
     position: fixed;

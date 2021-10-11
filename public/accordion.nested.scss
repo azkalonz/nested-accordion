@@ -15,6 +15,10 @@ body {
   * {
     box-sizing: border-box;
   }
+  .detail-card-container {
+    position: sticky;
+    top: 30px;
+  }
   @media screen and (max-width: $detail-card-break-point) {
     .detail-card-container {
       position: fixed;
