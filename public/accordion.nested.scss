@@ -1,6 +1,11 @@
 $first-break-point: 1250px;
 $second-break-point: 875px;
 
+$compact-card-height: 80px;
+$opened-card-height: 60px;
+
+$detail-card-break-point: 1433px;
+
 body {
   margin: 0 auto;
   max-width: 1400px;
@@ -10,11 +15,27 @@ body {
   * {
     box-sizing: border-box;
   }
-  #sidebar {
+  @media screen and (max-width: $detail-card-break-point) {
+    .detail-card-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      #detail-card {
+        width: 80% !important;
+      }
+    }
+  }
+  #detail-card {
     font-family: "DW Sans", sans-serif;
-    position: sticky;
+    position: relative;
     top: 30px;
-    right: 0;
     width: 305px;
     min-width: 305px;
     animation: slideLeft 0.26s ease-out 1;
@@ -22,16 +43,16 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
-    @media screen and (max-width: $first-break-point) {
-      display: none;
+    @media screen and (max-width: $detail-card-break-point) {
+      top: 0 !important;
     }
     &:not(.has-case-study) {
       padding-bottom: 24px;
     }
     h1,
     p {
-      margin: 0 24px;
-      margin-bottom: 24px;
+      padding: 0 24px;
+      padding-bottom: 24px;
     }
     p {
       font-style: normal;
@@ -39,6 +60,8 @@ body {
       font-size: 16px;
       line-height: 143%;
       color: #2b2b2b;
+      max-height: 30vh;
+      overflow: auto;
     }
     h1 {
       font-style: normal;
@@ -151,10 +174,10 @@ body {
     flex: 1;
     border-radius: 8px;
     overflow: hidden;
-    min-height: 50px;
-    transition: flex 0.26s ease-out;
+    min-height: $compact-card-height;
+    transition: all 0.26s ease-out;
     &.parent {
-      min-height: 65px;
+      min-height: $compact-card-height;
       border: 1px solid #bdbdbd;
       flex: 100%;
       flex-wrap: wrap;
@@ -163,6 +186,14 @@ body {
       }
       .title {
         width: 100%;
+      }
+    }
+    &.is-open.themed {
+      & > .title {
+        height: $opened-card-height;
+      }
+      & > .content {
+        padding-top: 0;
       }
     }
     &.is-closed {
@@ -209,7 +240,6 @@ body {
     }
     &.themed {
       .title {
-        backdrop-filter: opacity(10px);
         background: transparent;
         border-bottom: none;
       }
@@ -221,6 +251,7 @@ body {
       justify-content: space-between;
       padding: 16px;
       transition: all 0.26s ease-in-out;
+      height: $compact-card-height;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -232,11 +263,10 @@ body {
       letter-spacing: 0em;
       text-align: left;
     }
+
     &:not(.parent) {
       @media screen and (max-width: $first-break-point) {
-        &:not(.full-width) {
-          flex: 1 !important;
-        }
+        flex: 100% !important;
       }
       @media screen and (max-width: $second-break-point) {
         &.is-closed {
@@ -258,13 +288,14 @@ body {
     .item {
       cursor: pointer;
       flex: 1 30%;
-      height: 80px;
-      max-height: 80px;
+      height: $compact-card-height;
+      max-height: $compact-card-height;
       justify-content: center;
       flex-direction: column;
       display: flex;
       border-radius: 8px;
       padding: 0 24px;
+      white-space: pre-wrap;
       h1,
       h2 {
         font-size: 16px;

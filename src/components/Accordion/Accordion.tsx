@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import Icon from "../Icon";
 import { ReactComponent as ArrowIcon } from "../../icons/icon-arrow.svg";
+import Icon from "../Icon";
 
 interface AccordionProps {
   children?: React.ReactNode;
@@ -13,6 +13,7 @@ interface AccordionProps {
   isOpen?: boolean;
   fullWidth?: boolean;
   background?: string;
+  "data-section"?: string;
 }
 
 export default function Accordion(props: AccordionProps) {
@@ -32,12 +33,31 @@ export default function Accordion(props: AccordionProps) {
   const toggleContent = () => {
     if (!accordionRef.current) return;
     const contains = accordionRef.current.classList.contains("is-closed");
-    accordionRef.current.classList[contains ? "remove" : "add"]("is-closed");
+    if (contains) {
+      accordionRef.current.classList.add("is-open");
+      accordionRef.current.classList.remove("is-closed");
+      if (
+        accordionRef.current.getAttribute("data-section") === "Applications"
+      ) {
+        document
+          .querySelectorAll("[data-section=Applications]")
+          .forEach((element) => {
+            element.classList.remove("is-closed");
+            element.classList.add("is-open");
+          });
+      }
+    } else {
+      accordionRef.current.classList.remove("is-open");
+      accordionRef.current.classList.add("is-closed");
+    }
   };
 
   return (
     <div
       ref={accordionRef}
+      {...(props["data-section"]
+        ? { "data-section": props["data-section"] }
+        : {})}
       className={[
         "accordion",
         parent ? "parent" : "",

@@ -8,12 +8,34 @@ body {
           box-sizing: border-box;
 }
 
-#nested-accordion #sidebar {
+@media screen and (max-width: 1433px) {
+  #nested-accordion .detail-card-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #nested-accordion .detail-card-container #detail-card {
+    width: 80% !important;
+  }
+}
+
+#nested-accordion #detail-card {
   font-family: "DW Sans", sans-serif;
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
   top: 30px;
-  right: 0;
   width: 305px;
   min-width: 305px;
   -webkit-animation: slideLeft 0.26s ease-out 1;
@@ -25,31 +47,33 @@ body {
           box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1250px) {
-  #nested-accordion #sidebar {
-    display: none;
+@media screen and (max-width: 1433px) {
+  #nested-accordion #detail-card {
+    top: 0 !important;
   }
 }
 
-#nested-accordion #sidebar:not(.has-case-study) {
+#nested-accordion #detail-card:not(.has-case-study) {
   padding-bottom: 24px;
 }
 
-#nested-accordion #sidebar h1,
-#nested-accordion #sidebar p {
-  margin: 0 24px;
-  margin-bottom: 24px;
+#nested-accordion #detail-card h1,
+#nested-accordion #detail-card p {
+  padding: 0 24px;
+  padding-bottom: 24px;
 }
 
-#nested-accordion #sidebar p {
+#nested-accordion #detail-card p {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 143%;
   color: #2b2b2b;
+  max-height: 30vh;
+  overflow: auto;
 }
 
-#nested-accordion #sidebar h1 {
+#nested-accordion #detail-card h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -60,8 +84,8 @@ body {
   padding-top: 24px !important;
 }
 
-#nested-accordion #sidebar .urls a::before,
-#nested-accordion #sidebar .read-case-study::before {
+#nested-accordion #detail-card .urls a::before,
+#nested-accordion #detail-card .read-case-study::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -71,7 +95,7 @@ body {
   top: 37%;
 }
 
-#nested-accordion #sidebar .urls {
+#nested-accordion #detail-card .urls {
   margin: 0 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,7 +110,7 @@ body {
   gap: 8px;
 }
 
-#nested-accordion #sidebar .urls a {
+#nested-accordion #detail-card .urls a {
   position: relative;
   font-style: normal;
   font-weight: normal;
@@ -100,20 +124,20 @@ body {
   padding: 8px 16px;
 }
 
-#nested-accordion #sidebar .urls a::before {
+#nested-accordion #detail-card .urls a::before {
   right: 24px;
 }
 
-#nested-accordion #sidebar .urls a:hover {
+#nested-accordion #detail-card .urls a:hover {
   color: #ffffff;
   background: #a466ff;
 }
 
-#nested-accordion #sidebar .urls a:hover::before {
+#nested-accordion #detail-card .urls a:hover::before {
   background: url("/svg/icon-arrow-hover.svg") no-repeat center;
 }
 
-#nested-accordion #sidebar .read-case-study {
+#nested-accordion #detail-card .read-case-study {
   margin-top: 24px;
   display: block;
   width: 100%;
@@ -131,7 +155,7 @@ body {
   position: relative;
 }
 
-#nested-accordion #sidebar .read-case-study::after {
+#nested-accordion #detail-card .read-case-study::after {
   content: "";
   position: absolute;
   right: 37px;
@@ -143,17 +167,17 @@ body {
   background-size: cover;
 }
 
-#nested-accordion #sidebar .read-case-study::before {
+#nested-accordion #detail-card .read-case-study::before {
   top: 32%;
   right: 120px;
 }
 
-#nested-accordion #sidebar .read-case-study:hover {
+#nested-accordion #detail-card .read-case-study:hover {
   color: #ffffff;
   background: #a466ff url("/svg/dots-hover.svg") no-repeat bottom center;
 }
 
-#nested-accordion #sidebar .read-case-study:hover::before {
+#nested-accordion #detail-card .read-case-study:hover::before {
   background: url("/svg/icon-arrow-hover.svg") no-repeat center;
 }
 
@@ -197,15 +221,13 @@ body {
           flex: 1;
   border-radius: 8px;
   overflow: hidden;
-  min-height: 50px;
-  -webkit-transition: -webkit-box-flex 0.26s ease-out;
-  transition: -webkit-box-flex 0.26s ease-out;
-  transition: flex 0.26s ease-out;
-  transition: flex 0.26s ease-out, -webkit-box-flex 0.26s ease-out, -ms-flex 0.26s ease-out;
+  min-height: 80px;
+  -webkit-transition: all 0.26s ease-out;
+  transition: all 0.26s ease-out;
 }
 
 #nested-accordion .accordion.parent {
-  min-height: 65px;
+  min-height: 80px;
   border: 1px solid #bdbdbd;
   -webkit-box-flex: 100%;
       -ms-flex: 100%;
@@ -221,6 +243,14 @@ body {
 
 #nested-accordion .accordion.parent .title {
   width: 100%;
+}
+
+#nested-accordion .accordion.is-open.themed > .title {
+  height: 60px;
+}
+
+#nested-accordion .accordion.is-open.themed > .content {
+  padding-top: 0;
 }
 
 #nested-accordion .accordion.is-closed:not(.parent):not(.full-width),
@@ -286,8 +316,6 @@ body {
 }
 
 #nested-accordion .accordion.themed .title {
-  -webkit-backdrop-filter: opacity(10px);
-          backdrop-filter: opacity(10px);
   background: transparent;
   border-bottom: none;
 }
@@ -306,6 +334,7 @@ body {
   padding: 16px;
   -webkit-transition: all 0.26s ease-in-out;
   transition: all 0.26s ease-in-out;
+  height: 80px;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -322,10 +351,10 @@ body {
 }
 
 @media screen and (max-width: 1250px) {
-  #nested-accordion .accordion:not(.parent):not(.full-width) {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 !important;
-            flex: 1 !important;
+  #nested-accordion .accordion:not(.parent) {
+    -webkit-box-flex: 100% !important;
+        -ms-flex: 100% !important;
+            flex: 100% !important;
   }
 }
 
@@ -376,6 +405,7 @@ body {
   display: flex;
   border-radius: 8px;
   padding: 0 24px;
+  white-space: pre-wrap;
 }
 
 #nested-accordion .category-items .item h1,

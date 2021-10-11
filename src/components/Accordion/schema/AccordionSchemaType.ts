@@ -1,7 +1,6 @@
 type ContentURLs = {
-  main?: string;
-  readMore?: string;
-  readCaseStudy?: string;
+  sources: string[];
+  readCaseStudy: string;
 };
 
 export interface AccordionContent {
@@ -22,6 +21,10 @@ interface AccordionSection {
   columns?: number;
   open?: boolean;
   fullWidth?: boolean;
+  expandable?: boolean;
+  selected?: {
+    color: string;
+  };
 }
 
 export interface AccordionType {

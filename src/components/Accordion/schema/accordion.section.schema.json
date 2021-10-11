@@ -5,9 +5,11 @@
     "title": { "type": "string" },
     "subtitle": { "type": "string" },
     "color": { "type": "string" },
+    "sectionColor": { "type": "string" },
     "background": { "type": "string" },
     "columns": { "type": "number" },
     "fullWidth": { "type": "boolean" },
+    "expandable": { "type": "boolean" },
     "content": {
       "type": "object",
       "properties": {
