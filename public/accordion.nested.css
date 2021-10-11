@@ -84,6 +84,11 @@ body {
   padding-top: 24px !important;
 }
 
+#nested-accordion #detail-card .urls a,
+#nested-accordion #detail-card .read-case-study {
+  text-transform: capitalize;
+}
+
 #nested-accordion #detail-card .urls a::before,
 #nested-accordion #detail-card .read-case-study::before {
   content: "";

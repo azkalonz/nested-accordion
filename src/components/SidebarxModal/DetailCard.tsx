@@ -52,7 +52,7 @@ export default function DetailCard() {
                     key={index}
                     href={source.substr(source.indexOf(":") + 1).trim()}
                   >
-                    {href && href[1]}
+                    {href && source.substr(0, source.indexOf(":"))}
                   </a>
                 );
               })}
