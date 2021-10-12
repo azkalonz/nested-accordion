@@ -10,7 +10,7 @@ export default function DetailCard() {
         title,
         body,
         variant = "simple",
-        urls: { sources, readCaseStudy },
+        urls: { sources = [], readCaseStudy = null } = {},
       },
       setCurrent,
     } = context;
@@ -35,7 +35,12 @@ export default function DetailCard() {
             .trim()}
         >
           <h1>{title}</h1>
-          <p>{body}</p>
+          <div
+            className="body"
+            dangerouslySetInnerHTML={{
+              __html: body.replaceAll("\n", "<br/>"),
+            }}
+          />
           <div className="urls">
             {readMore && <a href={readMore}>Read More</a>}
             {sources
@@ -50,6 +55,7 @@ export default function DetailCard() {
                 return (
                   <a
                     key={index}
+                    target="_blank"
                     href={source.substr(source.indexOf(":") + 1).trim()}
                   >
                     {href && source.substr(0, source.indexOf(":"))}
@@ -58,7 +64,7 @@ export default function DetailCard() {
               })}
           </div>
           {readCaseStudy && (
-            <a href={readCaseStudy} className="read-case-study">
+            <a target="_blank" href={readCaseStudy} className="read-case-study">
               Read Case Study
             </a>
           )}
