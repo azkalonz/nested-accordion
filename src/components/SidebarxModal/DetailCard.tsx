@@ -42,7 +42,11 @@ export default function DetailCard() {
             }}
           />
           <div className="urls">
-            {readMore && <a href={readMore}>Read More</a>}
+            {readMore && (
+              <a target="_blank" href={readMore}>
+                Read More
+              </a>
+            )}
             {sources
               .filter((q) => q.toLowerCase().indexOf("read more") < 0)
               .map((source, index) => {
