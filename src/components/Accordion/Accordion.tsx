@@ -80,7 +80,17 @@ export default function Accordion(props: AccordionProps) {
           : {}),
       }}
     >
-      <div className="title" onClick={disabled ? () => {} : toggleContent}>
+      <div
+        className="title"
+        onClick={disabled ? () => {} : toggleContent}
+        style={
+          disabled
+            ? {
+                cursor: "initial",
+              }
+            : {}
+        }
+      >
         <b style={{ color }}>{title}</b>
         {!disabled && arrow && <Icon icon={<ArrowIcon />} />}
       </div>
