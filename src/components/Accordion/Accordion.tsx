@@ -35,6 +35,7 @@ export default function Accordion(props: AccordionProps) {
   const toggleContent = () => {
     if (!accordionRef.current) return;
     const contains = accordionRef.current.classList.contains("is-closed");
+
     if (contains) {
       accordionRef.current.classList.add("is-open");
       accordionRef.current.classList.remove("is-closed");

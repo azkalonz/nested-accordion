@@ -22,34 +22,44 @@ export function updatedSelectedItem() {
       element.style.color = element.getAttribute("data-initial-color") + "";
     }
   });
+  document.body.style.overflow = "auto";
 }
 
 const updateDetailCardPosition = () => {
   const detailCard = document.querySelector("#detail-card");
-  const rootDiv = window.parent.document.querySelector("#nested-accordion");
+  const rootDiv = window.document.querySelector("#nested-accordion");
   const internalDiv = document.querySelector("#nested-accordion");
   let top, bottom;
 
-  top = window.parent.document.body.getBoundingClientRect().top * -1;
+  if (detailCard instanceof HTMLElement) {
+    if (
+      detailCard.parentElement &&
+      window.getComputedStyle(detailCard.parentElement)["position"] === "static"
+    ) {
+      top = window.document.body.getBoundingClientRect().top * -1;
 
-  if (rootDiv && rootDiv?.getBoundingClientRect().top < 20) {
-    top -= top + rootDiv.getBoundingClientRect().top;
+      if (rootDiv && rootDiv?.getBoundingClientRect().top < 20) {
+        top -= top + rootDiv.getBoundingClientRect().top;
 
-    if (detailCard instanceof HTMLElement) {
-      if (internalDiv) {
-        let topOffset =
-          rootDiv.getBoundingClientRect().top +
-          window.parent.document.documentElement.scrollTop;
-        bottom = topOffset + internalDiv.clientHeight;
-        if (
-          window.parent.document.documentElement.scrollTop +
-            detailCard.clientHeight >
-          bottom
-        ) {
-          return;
+        if (detailCard instanceof HTMLElement) {
+          if (internalDiv) {
+            let topOffset =
+              rootDiv.getBoundingClientRect().top +
+              window.document.documentElement.scrollTop;
+            bottom = topOffset + internalDiv.clientHeight;
+            if (
+              window.document.documentElement.scrollTop +
+                detailCard.clientHeight >
+              bottom
+            ) {
+              return;
+            }
+          }
+          detailCard.style.top = top + 20 + "px";
         }
       }
-      detailCard.style.top = top + 20 + "px";
+    } else {
+      document.body.style.overflow = "hidden";
     }
   }
 };
@@ -170,9 +180,9 @@ function App() {
           setDetailCardData(data.detailCard);
         }
       });
-    window.parent.addEventListener("scroll", updateDetailCardPosition);
+    window.addEventListener("scroll", updateDetailCardPosition);
     return () => {
-      window.parent.removeEventListener("scrool", updateDetailCardPosition);
+      window.removeEventListener("scrool", updateDetailCardPosition);
     };
   }, []);
 
