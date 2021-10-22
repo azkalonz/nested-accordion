@@ -70,6 +70,9 @@ body {
       overflow: auto;
       margin-bottom: 24px;
       padding-bottom: 0;
+      @media screen and (min-width: $detail-card-break-point) {
+        max-height: 30vh;
+      }
     }
     h1 {
       font-style: normal;
