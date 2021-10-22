@@ -74,7 +74,7 @@ function App() {
     }
   }, [screenSize]);
 
-  const NestedAccordion = function (index: number) {
+  const NestedAccordion = function (index: number, recursive: boolean = true) {
     if (!data) return null;
     if (index >= data.length) return null;
 
@@ -172,7 +172,7 @@ function App() {
               )
             );
           })}
-        {NestedAccordion(index + 1)}
+        {recursive && NestedAccordion(index + 1)}
       </Accordion>
     );
   };
@@ -194,7 +194,7 @@ function App() {
     <SidebarxModalProvider.Provider value={{ current, setCurrent }}>
       <div className="wrapper">
         {error && <b>{error}</b>}
-        {data && !error && NestedAccordion(0)}
+        <div>{data && !error && NestedAccordion(0)}</div>
         {screenSize === "lg" && <DetailCard data={detailCardData} />}
         {screenSize !== "lg" && <Carousel data={data} />}
       </div>
