@@ -25,7 +25,6 @@ export function updatedSelectedItem() {
       element.style.color = element.getAttribute("data-initial-color") + "";
     }
   });
-  document.body.style.overflow = "auto";
 }
 
 function App() {
@@ -71,8 +70,6 @@ function App() {
             detailCard.style.top = top + 20 + "px";
           }
         }
-      } else {
-        document.body.style.overflow = "hidden";
       }
     }
   }, [screenSize]);
