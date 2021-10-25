@@ -369,6 +369,9 @@ body {
 }
 
 .pseudo.accordion {
+  .content {
+    padding: 0 !important;
+  }
   .category-items {
     margin: 0;
   }

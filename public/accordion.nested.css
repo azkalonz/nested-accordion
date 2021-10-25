@@ -492,6 +492,10 @@ body {
   background: #fff !important;
 }
 
+.pseudo.accordion .content {
+  padding: 0 !important;
+}
+
 .pseudo.accordion .category-items {
   margin: 0;
 }

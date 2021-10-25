@@ -98,19 +98,12 @@ function App() {
                     flex: subAccordion.columns || 1,
                   },
                   "data-section": accordion.title,
+                  expandable: subAccordion.expandable,
                 }
-              : { key: index };
-
-            function PseudoAccordion({
-              children,
-            }: {
-              children?: React.ReactNode;
-            }) {
-              return <div className="accordion pseudo">{children}</div>;
-            }
+              : { key: index, expandable: subAccordion.expandable };
 
             return React.createElement(
-              subAccordion.expandable ? Accordion : PseudoAccordion,
+              Accordion,
               props,
               subAccordion.sections && (
                 <ul
