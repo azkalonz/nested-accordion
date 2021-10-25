@@ -230,6 +230,11 @@ body {
           height: 49px;
           margin-bottom: 16px;
         }
+        &.is-closed > .title {
+          padding: 16px 16px 0 16px;
+          height: 68px;
+          margin-bottom: 0;
+        }
       }
     }
     &.is-open.themed {
@@ -369,6 +374,7 @@ body {
 }
 
 .pseudo.accordion {
+  overflow: visible !important;
   .content {
     padding: 0 !important;
   }

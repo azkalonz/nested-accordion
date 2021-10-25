@@ -297,6 +297,12 @@ body {
   margin-bottom: 16px;
 }
 
+#nested-accordion .accordion.parent:not(.themed).is-closed > .title {
+  padding: 16px 16px 0 16px;
+  height: 68px;
+  margin-bottom: 0;
+}
+
 #nested-accordion .accordion.is-open.themed > .title {
   height: 60px;
 }
@@ -490,6 +496,10 @@ body {
   -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
   background: #fff !important;
+}
+
+.pseudo.accordion {
+  overflow: visible !important;
 }
 
 .pseudo.accordion .content {
