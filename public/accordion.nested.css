@@ -282,12 +282,19 @@ body {
 }
 
 #nested-accordion .accordion.parent .content {
+  padding-top: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 #nested-accordion .accordion.parent .title {
   width: 100%;
+}
+
+#nested-accordion .accordion.parent:not(.themed) > .title {
+  padding: 16px 16px 0 16px;
+  height: 49px;
+  margin-bottom: 16px;
 }
 
 #nested-accordion .accordion.is-open.themed > .title {

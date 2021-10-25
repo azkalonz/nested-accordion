@@ -218,10 +218,18 @@ body {
       flex: 100%;
       flex-wrap: wrap;
       .content {
+        padding-top: 0;
         flex-wrap: wrap;
       }
       .title {
         width: 100%;
+      }
+      &:not(.themed) {
+        & > .title {
+          padding: 16px 16px 0 16px;
+          height: 49px;
+          margin-bottom: 16px;
+        }
       }
     }
     &.is-open.themed {
