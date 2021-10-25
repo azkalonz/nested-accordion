@@ -368,6 +368,12 @@ body {
   }
 }
 
+.pseudo.accordion {
+  .category-items {
+    margin: 0;
+  }
+}
+
 .card-carousel {
   position: fixed;
   top: 0;

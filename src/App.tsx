@@ -106,7 +106,7 @@ function App() {
             }: {
               children?: React.ReactNode;
             }) {
-              return <div className="accordion">{children}</div>;
+              return <div className="accordion pseudo">{children}</div>;
             }
 
             return React.createElement(
