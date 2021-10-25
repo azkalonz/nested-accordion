@@ -7,7 +7,7 @@ import {
   AccordionContent,
   AccordionType,
 } from "./Accordion/schema/AccordionSchemaType";
-import { Card } from "./SidebarxModal/DetailCard";
+import { Card, fixCardsHeight } from "./SidebarxModal/DetailCard";
 import SidebarxModalProvider from "./SidebarxModal/SidebarxModalProvider";
 
 interface CarouselProps {
@@ -41,7 +41,14 @@ export default function Carousel(props: CarouselProps) {
           .find((q) => q.toLowerCase().indexOf("read more") >= 0)
           ?.replace("Read more:", "");
         return (
-          <SwiperSlide key={title}>
+          <SwiperSlide
+            key={title}
+            onClick={(e) => {
+              if (e.currentTarget === e.target) {
+                context?.setCurrent(undefined);
+              }
+            }}
+          >
             <Card
               sources={sources}
               variant={variant}
@@ -88,6 +95,11 @@ export default function Carousel(props: CarouselProps) {
     if (context?.setCurrent) {
       context.setCurrent(undefined);
     }
+    window.addEventListener("resize", fixCardsHeight, false);
+
+    return () => {
+      window.removeEventListener("resize", fixCardsHeight, false);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -95,6 +107,9 @@ export default function Carousel(props: CarouselProps) {
     <div className="card-carousel">
       {data?.length && (
         <Swiper
+          onSlideChange={() => {
+            fixCardsHeight();
+          }}
           centeredSlides={true}
           slidesPerView={"auto"}
           onSwiper={(swiper) => {
