@@ -382,25 +382,18 @@ body {
     .detail-card {
       top: 0px !important;
       width: 80% !important;
+      min-width: auto !important;
     }
   }
   .swiper-slide-prev {
     transform: translateX(15%);
-    opacity: 0.6;
+    opacity: 0.78;
     z-index: 0;
   }
   .swiper-slide-next {
     transform: translateX(-15%);
-    opacity: 0.6;
+    opacity: 0.78;
     z-index: 0;
-  }
-  @media screen and (max-width: 362px) {
-    .swiper-slide-prev {
-      transform: translateX(0%);
-    }
-    .swiper-slide-next {
-      transform: translateX(0%);
-    }
   }
 }
 

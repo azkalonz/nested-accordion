@@ -19,6 +19,16 @@ export default function Carousel(props: CarouselProps) {
   const swiperRef = useRef<any>();
   const context = useContext(SidebarxModalProvider);
 
+  const onClose = () => {
+    context?.setCurrent(undefined);
+    setTimeout(() => {
+      document.querySelectorAll(".item.selected").forEach((el) => {
+        el.classList.remove("selected");
+      });
+      updatedSelectedItem();
+    }, 0);
+  };
+
   const Cards = function (): ReactChild[] {
     if (data) {
       const cardData = [] as AccordionContent[];
@@ -45,7 +55,7 @@ export default function Carousel(props: CarouselProps) {
             key={title}
             onClick={(e) => {
               if (e.currentTarget === e.target) {
-                context?.setCurrent(undefined);
+                onClose();
               }
             }}
           >
@@ -58,15 +68,7 @@ export default function Carousel(props: CarouselProps) {
               title={title}
               setCurrent={() => {}}
               data={content}
-              onClose={() => {
-                context?.setCurrent(undefined);
-                setTimeout(() => {
-                  document.querySelectorAll(".item.selected").forEach((el) => {
-                    el.classList.remove("selected");
-                  });
-                  updatedSelectedItem();
-                }, 0);
-              }}
+              onClose={onClose}
             />
           </SwiperSlide>
         );
