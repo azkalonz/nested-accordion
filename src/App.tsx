@@ -101,8 +101,16 @@ function App() {
                 }
               : { key: index };
 
+            function PseudoAccordion({
+              children,
+            }: {
+              children?: React.ReactNode;
+            }) {
+              return <div className="accordion">{children}</div>;
+            }
+
             return React.createElement(
-              subAccordion.expandable ? Accordion : React.Fragment,
+              subAccordion.expandable ? Accordion : PseudoAccordion,
               props,
               subAccordion.sections && (
                 <ul
@@ -194,7 +202,15 @@ function App() {
     <SidebarxModalProvider.Provider value={{ current, setCurrent }}>
       <div className="wrapper">
         {error && <b>{error}</b>}
-        <div>{data && !error && NestedAccordion(0)}</div>
+        <div style={{ width: "100%" }}>
+          {data && !error && (
+            <>
+              <div>{NestedAccordion(0, false)}</div>
+              <div>{NestedAccordion(1, false)}</div>
+              <div>{NestedAccordion(2, false)}</div>
+            </>
+          )}
+        </div>
         {screenSize === "lg" && <DetailCard data={detailCardData} />}
         {screenSize !== "lg" && <Carousel data={data} />}
       </div>
