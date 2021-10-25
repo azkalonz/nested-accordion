@@ -24,9 +24,6 @@ export const fixCardsHeight = () => {
           newHeight = 200;
         }
         body.style.height = newHeight + "px";
-        if (c.querySelector("h1")?.textContent?.trim() === "Zero×") {
-          console.log(c.clientHeight > winHeight);
-        }
         if (c.clientHeight > winHeight) {
           c.style.alignSelf = "flex-start";
           c.style.margin = "10px auto";
