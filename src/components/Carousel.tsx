@@ -29,7 +29,7 @@ export default function Carousel(props: CarouselProps) {
     }, 0);
   };
 
-  const Cards = function (): ReactChild[] {
+  const getCardContents = function (): AccordionContent[] | [] {
     if (data) {
       const cardData = [] as AccordionContent[];
       data.forEach((section) =>
@@ -39,6 +39,34 @@ export default function Carousel(props: CarouselProps) {
           })
         )
       );
+      return cardData;
+    }
+    return [];
+  };
+
+  const updateArrows = () => {
+    const cardData = getCardContents();
+
+    if (cardData) {
+      const leftArrow = document.querySelector(".arrow-left") as HTMLElement;
+      const rightArrow = document.querySelector(".arrow-right") as HTMLElement;
+      if (leftArrow && swiperRef.current.activeIndex === 0) {
+        leftArrow.style.opacity = "0";
+      } else {
+        leftArrow.style.opacity = "1";
+      }
+      if (rightArrow && swiperRef.current.activeIndex === cardData.length - 1) {
+        rightArrow.style.opacity = "0";
+      } else {
+        rightArrow.style.opacity = "1";
+      }
+    }
+  };
+
+  const Cards = function (): ReactChild[] {
+    if (data) {
+      const cardData = getCardContents();
+
       return cardData.map((content) => {
         const {
           title,
@@ -111,13 +139,27 @@ export default function Carousel(props: CarouselProps) {
         <Swiper
           onSlideChange={() => {
             fixCardsHeight();
+            updateArrows();
           }}
           centeredSlides={true}
           slidesPerView={"auto"}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
+            updateArrows();
           }}
         >
+          <span
+            className="arrow-left"
+            onClick={() => {
+              swiperRef.current.slidePrev();
+            }}
+          ></span>
+          <span
+            className="arrow-right"
+            onClick={() => {
+              swiperRef.current.slideNext();
+            }}
+          ></span>
           {Cards()}
         </Swiper>
       )}

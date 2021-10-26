@@ -399,7 +399,7 @@
     {
       "title": "Trust Layer",
       "open": true,
-      "disabled": false,
+      "disabled": true,
       "content": [
         {
           "title": "Energy Web Chain & Tools",
