@@ -137,7 +137,7 @@ function App() {
                       <li
                         className="item"
                         key={index}
-                        style={style}
+                        style={{ ...style, ...(section.style || {}) }}
                         data-color={dataColor}
                         data-initial-color={subAccordion.color}
                         onClick={({ currentTarget }) => {

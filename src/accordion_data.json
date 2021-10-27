@@ -1,7 +1,7 @@
 {
   "detailCard": {
-    "title": "Lorem Ipsum",
-    "body": "Quis adipisicing Lorem in ullamco duis. Est ea elit nulla voluptate ullamco nulla aute mollit officia fugiat reprehenderit pariatur qui. Culpa ipsum amet magna dolore eiusmod culpa consectetur nulla exercitation."
+    "title": "Details",
+    "body": "The Energy Web Decentralized Operating System (EW-DOS) has three layers that work together to enable development and deployment of decentralized applications for the energy sector and beyond. \n\n Click on any box and you’ll be able to read a short description of the project here."
   },
   "data": [
     {
@@ -15,7 +15,7 @@
           "background": "#e8f5f6",
           "sectionColor": "#b7eaf1",
           "columns": 2,
-          "open": true,
+          "open": false,
           "expandable": true,
           "sections": [
             {
@@ -110,7 +110,7 @@
               "subtitle": "FlexRunner IOT Firmware",
               "content": {
                 "title": "FlexRunner IOT Firmware",
-                "body": "Flex Runner is a modular framework for IoT devices. The project aims at making IoT devices more maintainable, manageable and smart by using small applications, called Flex Actions on a workflow document, called Flex Workflows. These Flex Actions allow users to create automations based on the readings of their IOT submeter. To better understand the concept, you can think of Flex Runner as a “GitHub Actions running on an IoT device”"
+                "body": "Flex Runner is a modular framework for IoT devices. The project aims to make IoT devices more maintainable, manageable and smart by using small applications, called Flex Actions, assigned to workflow documents, called Flex Workflows. These Flex Actions allow users to create automations based on the readings of their IOT submeter. To better understand the concept, you can think of Flex Runner as ‘GitHub Actions running on an IoT device’"
               }
             }
           ]
@@ -121,14 +121,14 @@
           "background": "#e6f6ec",
           "sectionColor": "#58F48D",
           "expandable": true,
-          "open": true,
+          "open": false,
           "sections": [
             {
               "title": "Elia",
               "subtitle": "E-Mobility Dashboard",
               "content": {
                 "title": "E-Mobility Dashboard",
-                "body": "An open platform to simplify identifying electric vehicles and charge points, through digital identities on the Energy Web Chain, which enables all parties to get trustworthy, live and historic data from devices, improving green electricity purchasing and enabling the emergence of other energy services and opportunities for owners and energy companies",
+                "body": "An open platform to simplify the identification of electric vehicles and charge points through digital identities anchored on the Energy Web Chain, enabling all parties to get trustworthy, live and historic data from devices, improving green electricity purchasing and enabling the emergence of other energy services and opportunities for owners and energy companies",
                 "urls": {
                   "sources": [
                     "partnership announcement: https://medium.com/energy-web-insights/elia-group-and-energy-web-launch-multi-year-strategic-partnership-be2c5d87395f"
@@ -138,7 +138,7 @@
               }
             },
             {
-              "title": "VW",
+              "title": "Volkswagen",
               "subtitle": "Smart Green Charging",
               "content": {
                 "title": "Smart Green Charging",
@@ -155,7 +155,7 @@
               "subtitle": "OCN",
               "content": {
                 "title": "OCN",
-                "body": "Share&Charge’s OCN is a decentralized e-roaming solution for seamless electric vehicle (EV) charging across different charge point networks. Since March 2020, the OCN has migrated onto the EnergyWeb Chain and is now a fully decentralized Applications on the EW network.",
+                "body": "Share&Charge’s OCN is a decentralized e-roaming solution for seamless electric vehicle (EV) charging across different charge point networks. Since March 2020, the OCN has migrated onto the EnergyWeb Chain and is now a fully decentralized application on the EW network.",
                 "urls": {
                   "sources": [
                     "announcement: https://medium.com/energy-web-insights/share-charge-foundation-launches-open-charging-network-on-energy-web-chain-84af7f6f5b3c"
@@ -170,7 +170,7 @@
           "color": "#E4A001",
           "background": "#fcf5e5",
           "sectionColor": "#FEC43D",
-          "open": true,
+          "open": false,
           "expandable": true,
           "sections": [
             {
@@ -194,7 +194,7 @@
               "subtitle": "Origin",
               "content": {
                 "title": "Origin",
-                "body": "Origin is a production-ready digital marketplace for renewable energy certificates. \n\n EW Deployed several instances of Origin for different partners in different geographies, among which:\n\n- PTT in Thailand\n- Foton in Turkey\n- PJM in 14 US States\n- NV Energy in Nevada, USA\n\n- PTT and EW cooperated to build a production-ready digital marketplace for renewable energy certificates in Thailand/APAC in line with the I-REC Standard. The marketplace, ReAcc, is starting off with the I-REC certificates but has other products on the roadmap such as digitizing PPAs and green EV charging. \n\n- PJM and EW cooperated in a year-long partnership to test blockchain-based tools (including the Origin SDK) for creating a digital marketplace for voluntary RECs. Several buyers and sellers of RECs tested the marketplace, which was integrated with the PJM GATS (Generation Attribute Tracking System) registry. \n\n- Foton and EW cooperated to build a production-ready digital marketplace for renewable energy certificates in Turkey in line with the I-REC Standard. The marketplace is up and running and accessible to renewable energy buyers and sellers.\n\n- EW, Blockchains LLC and the Public Utility Commission (PUC) of Nevada cooperated in testing blockchain-based technologies, including the Origin SDK and its issuer module, for creating a modern tracking system for Nevada's renewable energy certificates (\"PECs\").",
+                "body": "Origin offers customizable and mix-match modules to build digital tracking systems and marketplaces for renewable electricity certificates. \n\n EW Deployed several instances of Origin for different partners in different geographies, including:\n\n- PTT in Thailand:\nPTT and EW cooperated to build a production-ready digital marketplace for renewable energy certificates in Thailand, in line with the I-REC Standard.\n\n- Foton in Turkey:\nFoton and EW cooperated to build a production-ready digital marketplace for renewable energy certificates in Turkey in line with the I-REC Standard. The marketplace is up and running and accessible to renewable energy buyers and sellers.\n\n- PJM in 14 US States:\nPJM and EW cooperated in a year-long partnership to test blockchain-based tools (including the Origin SDK) for creating a digital marketplace for voluntary RECs.\n\n- NV Energy in Nevada, USA:\nEW, Blockchains LLC and the Public Utility Commission (PUC) of Nevada cooperated in testing blockchain-based technologies, including the Origin SDK and its issuer module, for creating a modern tracking system for Nevada's renewable energy certificates (\"PECs\").",
                 "urls": {
                   "sources": [
                     "PTT announcement: https://energyweb.org/2019/09/11/ptt-and-energy-web-foundation-launch-blockchain-based-renewables-platform-for-thailand-asean-japan/",
@@ -215,7 +215,7 @@
               "subtitle": "24/7",
               "content": {
                 "title": "24/7",
-                "body": "24/7 Explainer"
+                "body": "EW’s 24/7 is an open-source software development toolkit for tracking and matching renewable electricity generation and consumption at granular 30 minute and intervals."
               }
             }
           ]
@@ -225,7 +225,7 @@
           "color": "#DE0862",
           "background": "#fce6ef",
           "sectionColor": "#F9559A",
-          "open": true,
+          "open": false,
           "expandable": true,
           "sections": [
             {
@@ -233,7 +233,7 @@
               "subtitle": "DeFi 4 Energy Access",
               "content": {
                 "title": "DeFi 4 Energy Access",
-                "body": "ENGIE Energy Access — one of the leading off-grid, Pay-As-You-Go (PAYG) solar and mini-grid solutions providers in Africa, has partnered with Energy Web to accelerate energy access in sub-Saharan Africa through a decentralized finance (DeFi) crowdfunding platform. The DeFi application will be built on the open-source Energy Web tech stack and enable investors to provide microloans that support clean energy deployment",
+                "body": "ENGIE Energy Access — one of the leading off-grid, Pay-As-You-Go (PAYG) solar and mini-grid solutions providers in Africa, has partnered with Energy Web to accelerate energy access in sub-Saharan Africa through a decentralized finance (DeFi) crowdfunding platform. The DeFi application will be built on the open-source Energy Web tech stack and enable investors to provide microloans that support clean energy deployment.",
                 "urls": {
                   "sources": [
                     "project page: https://lab.energyweb.org/engie-energy-access/",
@@ -266,11 +266,9 @@
               "subtitle": "Switchboard",
               "content": {
                 "title": "Switchboard",
-                "body": "Switchboard is the identity and access management (IAM) interface for the Energy Web ecosystem. Its purpose is similar to centralized IAM services offered by Amazon or Google in that it allows you to define what users can do within and organization or an application.",
+                "body": "Switchboard is the identity and access management (IAM) interface for the Energy Web ecosystem. Its purpose is similar to centralized IAM services offered by Amazon or Google in that it allows you to define what users can do within an organization or application.",
                 "urls": {
-                  "sources": [
-                    "Read more: https://energy-web-foundation.gitbook.io/energy-web/foundational-concepts/self-sovereign-identity#decentralized-identifiers-dids"
-                  ]
+                  "sources": ["Read more: https://switchboard.energyweb.org/"]
                 }
               }
             },
@@ -279,7 +277,7 @@
               "subtitle": "DIDs",
               "content": {
                 "title": "DIDs",
-                "body": "A DID is a digital, verifiable identity that is user-generated and not coupled to any centralized institution. It can be used to identify any subject, such as an asset (all DERs - Distributed Energy Resources - such as solar panels, batteries, electric vehicles, smart appliances etc), a person, or an organization.",
+                "body": "A decentralized identifier (DID) is a digital, verifiable identity that is user-generated and not coupled to any centralized institution. It can be used to identify any subject, such as an asset (all DERs - Distributed Energy Resources - such as solar panels, batteries, electric vehicles, smart appliances etc), a person, or an organization.",
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/foundational-concepts/self-sovereign-identity#decentralized-identifiers-dids"
@@ -313,10 +311,10 @@
           "sections": [
             {
               "title": "",
-              "subtitle": "DSB Messaging",
+              "subtitle": "Decentralised Service Bus",
               "content": {
-                "title": "DSB Messaging",
-                "body": "A pub/sub messaging service for high-volume, low latency (machine-to-machine) communications that is integrated with the Energy Web Chain.",
+                "title": "Decentralised Service Bus",
+                "body": "Provides the functionality of a legacy enterprise service bus, but with improved scalability, availability, integrity, and governance.",
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/utility-layer-1#decentralized-service-bus-dsb"
@@ -326,10 +324,10 @@
             },
             {
               "title": "",
-              "subtitle": "Cache Server for Blockchain data",
+              "subtitle": "Decentralised Cache API",
               "content": {
-                "title": "Cache Server for Blockchain data",
-                "body": "A server that caches smart contract data in order to improve read-query performance for applications and packages that rely on data from the Energy Web Chain.",
+                "title": "Decentralised Cache API",
+                "body": "Provides a production-grade API interface for fast data retrieval from decentralised storages (e.g. IPFS) and decentralised ledgers (e.g. EWC).",
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/utility-layer-1#identity-access-and-management-iam-cache-server"
@@ -352,18 +350,18 @@
             },
             {
               "title": "",
-              "subtitle": "Watchtower",
+              "subtitle": "Watchtower Ecosystem",
               "content": {
-                "title": "Watchtower",
-                "body": "Watchtower Explainer"
+                "title": "Watchtower Ecosystem",
+                "body": "An ecosystem of decentralized agents that observes and measures the level and quality of services that are provisioned by Energy Web software-as-a-service providers and managers."
               }
             },
             {
               "title": "",
-              "subtitle": "EWNS Name Service",
+              "subtitle": "Energy Web Name Service",
               "content": {
-                "title": "EWNS Name Service",
-                "body": "A naming system for the Energy Web Chain ecosystem based on the Ethereum Name Service. It allows dapp users users to create human-readable, user-friendly names for blockchain identifiers and to reserve domain names for Energy Web applications.",
+                "title": "Energy Web Name Service",
+                "body": "A naming system for the Energy Web Chain ecosystem based on the Ethereum Name Service. It allows dApp users users to create human-readable, user-friendly names for blockchain identifiers and to reserve domain names for Energy Web applications.",
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/how-tos-and-tutorials/using-the-ethereum-name-service-ens"
@@ -373,10 +371,10 @@
             },
             {
               "title": "",
-              "subtitle": "EKC- Enterprise Key Connect",
+              "subtitle": "Enterprise Key Connect",
               "content": {
-                "title": "EKC- Enterprise Key Connect",
-                "body": "EKC- Enterprise Key Connect Explainer"
+                "title": "Enterprise Key Connect",
+                "body": "A utility which allows enterprise employees to use established identity providers, like Azure AD, to access the key storage provided by key management systems, such as Azure Key Vault, within web3 applications."
               }
             },
             {
@@ -384,12 +382,20 @@
               "subtitle": "ETH<>EWC Bridge",
               "content": {
                 "title": "ETH<>EWC Bridge",
-                "body": "ETH<>EWC Bridge Explainer",
+                "body": "A user interface that allows users to bridge the Energy Web Token to ERC20 tokens on the Ethereum mainnet, and to bridge ERC20 tokens on the Ethereum mainnet to the Energy Web Token on the Energy Web Chain.",
                 "urls": {
                   "sources": [
                     "Read more: https://app.gitbook.com/o/-MaVNTC0phnhS2JhwPF0/s/-M_pXALj14Egb-5Bal_p/token/token-bridge"
                   ]
                 }
+              }
+            },
+            {
+              "title": "",
+              "subtitle": "Decentralised Cluster Management",
+              "content": {
+                "title": "Decentralised Cluster Management",
+                "body": "A cloud provider and platform agnostic implementation to manage centralised cluster of nodes in a decentralised manner."
               }
             }
           ]
@@ -405,39 +411,23 @@
           "title": "Energy Web Chain & Tools",
           "color": "#FFFFFF",
           "sectionColor": "#A466FF",
+          "fullWidth": true,
           "background": "#d2b3ff",
-          "columns": 4,
+          "columns": 3,
+          "open": true,
           "expandable": false,
           "sections": [
             {
               "title": "",
-              "subtitle": "Energy Web Chain",
-              "background": "#A466FF",
-              "color": "#FFFFFF",
+              "subtitle": "Energy Web Token (EWT)",
+              "color": "#ffffff",
+              "background": "#D1B2FF",
               "selected": {
                 "color": "#A466FF"
               },
               "content": {
-                "title": "Energy Web Chain",
-                "body": "An open-source, Proof-of-Authority public blockchain derived from Ethereum blockchain technology. Provides the trust mechanism for EW-DOS and the DID registry through smart contracts. ",
-                "urls": {
-                  "sources": [
-                    "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/trust-layer-energy-web-chain"
-                  ]
-                }
-              }
-            },
-            {
-              "title": "",
-              "subtitle": "EWT",
-              "color": "#ffffff",
-              "background": "#d1b2ff",
-              "selected": {
-                "color": "#d1b2ff"
-              },
-              "content": {
-                "title": "EWT",
-                "body": "The Energy Web Chain's native utility token. Tokens are used in EW-DOS to pay for gas fees associated for on-chain transactions. ",
+                "title": "Energy Web Token (EWT)",
+                "body": "Energy Web Tokens are the native utility token of the Energy Web Chain. They are used to pay for services on EW-DOS.",
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/token/energy-web-token"
@@ -449,9 +439,9 @@
               "title": "",
               "subtitle": "Validator Nodes",
               "color": "#ffffff",
-              "background": "#d1b2ff",
+              "background": "#D1B2FF",
               "selected": {
-                "color": "#d1b2ff"
+                "color": "#A466FF"
               },
               "content": {
                 "title": "Validator Nodes",
@@ -467,16 +457,41 @@
               "title": "",
               "subtitle": "Block Explorer",
               "color": "#ffffff",
-              "background": "#d1b2ff",
+              "background": "#D1B2FF",
               "selected": {
-                "color": "#d1b2ff"
+                "color": "#A466FF"
               },
               "content": {
                 "title": "Block Explorer",
-                "body": "An interface that provides the most important on-chain information about blocks, transactions, accounts and Energy Web Token (EWT).",
+                "body": "An interface that provides the most important on-chain information about blocks, transactions, accounts, and tokens on the Energy Web Chain.",
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/trust-layer-energy-web-chain/block-explorer"
+                  ]
+                }
+              }
+            },
+            {
+              "title": "",
+              "subtitle": "Energy Web Chain",
+              "background": "#A466FF",
+              "style": {
+                "gridColumnStart": "span 3"
+              },
+              "color": "#FFFFFF",
+              "expandable": false,
+              "open": true,
+              "columns": 1,
+              "fullWidth": true,
+              "selected": {
+                "color": "#A466FF"
+              },
+              "content": {
+                "title": "Energy Web Chain",
+                "body": "An open-source, Proof-of-Authority public blockchain derived from Ethereum blockchain technology. Provides the trust mechanism for EW-DOS and the DID registry through smart contracts. ",
+                "urls": {
+                  "sources": [
+                    "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/trust-layer-energy-web-chain"
                   ]
                 }
               }
