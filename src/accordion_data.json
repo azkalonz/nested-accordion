@@ -419,6 +419,28 @@
           "sections": [
             {
               "title": "",
+              "subtitle": "Energy Web Chain",
+              "style": {
+                "gridColumnStart": "span 3",
+                "order": "3"
+              },
+              "background": "#A466FF",
+              "color": "#FFFFFF",
+              "selected": {
+                "color": "#A466FF"
+              },
+              "content": {
+                "title": "Energy Web Chain",
+                "body": "An open-source, Proof-of-Authority public blockchain derived from Ethereum blockchain technology. Provides the trust mechanism for EW-DOS and the DID registry through smart contracts. ",
+                "urls": {
+                  "sources": [
+                    "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/trust-layer-energy-web-chain"
+                  ]
+                }
+              }
+            },
+            {
+              "title": "",
               "subtitle": "Energy Web Token (EWT)",
               "color": "#ffffff",
               "background": "#D1B2FF",
@@ -456,6 +478,7 @@
             {
               "title": "",
               "subtitle": "Block Explorer",
+
               "color": "#ffffff",
               "background": "#D1B2FF",
               "selected": {
@@ -467,31 +490,6 @@
                 "urls": {
                   "sources": [
                     "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/trust-layer-energy-web-chain/block-explorer"
-                  ]
-                }
-              }
-            },
-            {
-              "title": "",
-              "subtitle": "Energy Web Chain",
-              "background": "#A466FF",
-              "style": {
-                "gridColumnStart": "span 3"
-              },
-              "color": "#FFFFFF",
-              "expandable": false,
-              "open": true,
-              "columns": 1,
-              "fullWidth": true,
-              "selected": {
-                "color": "#A466FF"
-              },
-              "content": {
-                "title": "Energy Web Chain",
-                "body": "An open-source, Proof-of-Authority public blockchain derived from Ethereum blockchain technology. Provides the trust mechanism for EW-DOS and the DID registry through smart contracts. ",
-                "urls": {
-                  "sources": [
-                    "Read more: https://energy-web-foundation.gitbook.io/energy-web/technology/the-stack/trust-layer-energy-web-chain"
                   ]
                 }
               }
